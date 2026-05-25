@@ -1,0 +1,44 @@
+{
+	"name": "smart-auto-accept",
+	"displayName": "Smart Auto Accept",
+	"description": "Auto accept agent with configurable UI, delay, and risk levels",
+	"version": "1.0.1",
+	"publisher": "tomy",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tomy/smart-auto-accept"
+	},
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"main": "extension.js",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "smartAutoAccept.openSettings",
+				"title": "Smart Auto Accept: Settings UI"
+			}
+		],
+		"configuration": {
+			"title": "Smart Auto Accept",
+			"properties": {
+				"smartAutoAccept.cdpPort": {
+					"type": "number",
+					"default": 9000,
+					"description": "Port used for Chrome DevTools Protocol connection."
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"ws": "^8.13.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1778938084912,
+		"targetPlatform": "undefined",
+		"size": 167595
+	}
+}
