@@ -4,7 +4,7 @@ function getWebviewContent(config, isEnabled) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Auto Accept Settings</title>
+    <title>Smart Auto Click-to-Accept Settings</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <style>
@@ -306,7 +306,7 @@ function getWebviewContent(config, isEnabled) {
 <body>
     <div class="dashboard-header">
         <div class="header-info">
-            <h2>Smart Auto Accept Dashboard</h2>
+            <h2>Smart Auto Click-to-Accept Dashboard</h2>
             <p>Tự động duyệt các lệnh an toàn từ AI agent. Kéo thả các lệnh dưới đây để phân loại rủi ro.</p>
         </div>
         <div class="toggle-container">

@@ -18,10 +18,10 @@ function updateStatusBar() {
     if (!statusBarItem) return;
     if (isEnabled) {
         statusBarItem.text = `$(check-all) SAC: ON`;
-        statusBarItem.tooltip = "Smart Auto Accept is ON. Click to toggle.";
+        statusBarItem.tooltip = "Smart Auto Click-to-Accept is ON. Click to toggle.";
     } else {
         statusBarItem.text = `$(circle-slash) SAC: OFF`;
-        statusBarItem.tooltip = "Smart Auto Accept is OFF. Click to toggle.";
+        statusBarItem.tooltip = "Smart Auto Click-to-Accept is OFF. Click to toggle.";
     }
 }
 
@@ -38,7 +38,7 @@ function activate(context) {
     let toggleCmd = vscode.commands.registerCommand('smartAutoAccept.toggle', () => {
         isEnabled = !isEnabled;
         context.globalState.update('smartAutoAcceptEnabled', isEnabled);
-        vscode.window.showInformationMessage(`Smart Auto Accept is now ${isEnabled ? 'ON' : 'OFF'}`);
+        vscode.window.showInformationMessage(`Smart Auto Click-to-Accept is now ${isEnabled ? 'ON' : 'OFF'}`);
         if (isEnabled && !cdpClient) {
             startCDP(config);
         } else if (!isEnabled && cdpClient) {
@@ -57,7 +57,7 @@ function activate(context) {
     let settingsCmd = vscode.commands.registerCommand('smartAutoAccept.openSettings', () => {
         const panel = vscode.window.createWebviewPanel(
             'smartAutoAcceptSettings',
-            'Smart Auto Accept Settings',
+            'Smart Auto Click-to-Accept Settings',
             vscode.ViewColumn.One,
             { enableScripts: true }
         );
@@ -73,12 +73,12 @@ function activate(context) {
             if (message.command === 'saveConfig') {
                 config = message.config;
                 context.globalState.update('smartAutoAcceptConfig', config);
-                vscode.window.showInformationMessage('✅ Cấu hình Smart Auto Accept đã được lưu!');
+                vscode.window.showInformationMessage('✅ Cấu hình Smart Auto Click-to-Accept đã được lưu!');
                 if (cdpClient) cdpClient.updateConfig(config);
             } else if (message.command === 'toggleStatus') {
                 isEnabled = message.enabled;
                 context.globalState.update('smartAutoAcceptEnabled', isEnabled);
-                vscode.window.showInformationMessage(`Smart Auto Accept is now ${isEnabled ? 'ON' : 'OFF'}`);
+                vscode.window.showInformationMessage(`Smart Auto Click-to-Accept is now ${isEnabled ? 'ON' : 'OFF'}`);
                 if (isEnabled && !cdpClient) {
                     startCDP(config);
                 } else if (!isEnabled && cdpClient) {
@@ -110,7 +110,7 @@ function activate(context) {
                             // Refresh all panels
                             activePanels.forEach(p => p.webview.html = getWebviewContent(config, isEnabled));
                         } else {
-                            vscode.window.showErrorMessage('❌ JSON cấu hình không đúng định dạng của Smart Auto Accept!');
+                            vscode.window.showErrorMessage('❌ JSON cấu hình không đúng định dạng của Smart Auto Click-to-Accept!');
                         }
                     } catch(e) {
                         vscode.window.showErrorMessage('❌ Nội dung trong Clipboard không phải là chuỗi JSON hợp lệ!');

@@ -1,6 +1,6 @@
-# 🚀 Smart Auto Accept (SAC)
+# 🚀 Smart Auto Click-to-Accept (SAC)
 
-**Smart Auto Accept** là một extension bảo mật thông minh dành cho các lập trình viên sử dụng mô hình AI-driven Development (như Antigravity). Nó hoạt động như một "Người gác cổng" tự động, giúp bạn phê duyệt các câu lệnh an toàn một cách chớp nhoáng, đồng thời ngăn chặn tuyệt đối các lệnh Terminal có nguy cơ phá hoại hệ thống.
+**Smart Auto Click-to-Accept (SAC)** là một extension tự động click thông minh (Intelligent Auto-Clicker) dành cho các lập trình viên sử dụng mô hình AI-driven Development (như Antigravity). Nó hoạt động như một "Người gác cổng" tự động, giúp bạn phê duyệt các câu lệnh an toàn một cách chớp nhoáng, đồng thời ngăn chặn tuyệt đối các lệnh Terminal có nguy cơ phá hoại hệ thống.
 
 ---
 
@@ -49,5 +49,6 @@ Nếu bạn thay đổi cổng `9000` thành số khác, hãy vào **VS Code Set
 ## 🛡️ Quyền Riêng Tư & An Toàn
 Mã nguồn can thiệp vòng lặp `setInterval` thuần túy bằng Javascript, không sử dụng tài nguyên bên thứ 3 và không truyền dữ liệu ra khỏi máy cá nhân của bạn. Khả năng cô lập ngữ cảnh (Context Isolation) đảm bảo extension **không bao giờ bị báo động giả** khi AI chỉ đơn thuần viết chữ vào file code.
 
-**Tác giả**: tomy
+**Tác giả**: [tomy](https://toha.us)
+**Website**: [https://toha.us](https://toha.us)
 **Phiên bản**: 1.0.1

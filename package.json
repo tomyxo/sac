@@ -1,9 +1,13 @@
 {
 	"name": "smart-auto-accept",
-	"displayName": "Smart Auto Accept",
-	"description": "Auto accept agent with configurable UI, delay, and risk levels",
+	"displayName": "Smart Auto Click-to-Accept (SAC)",
+	"description": "An intelligent click automation tool for Agentic IDEs.",
 	"version": "1.0.1",
 	"publisher": "tomy",
+	"author": {
+		"name": "tomy",
+		"url": "https://toha.us"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tomy/smart-auto-accept"
@@ -19,11 +23,11 @@
 		"commands": [
 			{
 				"command": "smartAutoAccept.openSettings",
-				"title": "Smart Auto Accept: Settings UI"
+				"title": "Smart Auto Click-to-Accept: Settings UI"
 			}
 		],
 		"configuration": {
-			"title": "Smart Auto Accept",
+			"title": "Smart Auto Click-to-Accept",
 			"properties": {
 				"smartAutoAccept.cdpPort": {
 					"type": "number",

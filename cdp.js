@@ -39,7 +39,7 @@ class CDPClient {
                             this.connect(page.webSocketDebuggerUrl);
                         } else {
                             if (!this.hasShownWarning) {
-                                vscode.window.showErrorMessage(`Smart Auto Accept: Không tìm thấy trang UI của Antigravity qua CDP (port ${this.port}).`);
+                                vscode.window.showErrorMessage(`Smart Auto Click-to-Accept: Không tìm thấy trang UI của Antigravity qua CDP (port ${this.port}).`);
                                 this.hasShownWarning = true;
                             }
                             if (this.isRunning) setTimeout(() => this._attemptConnect(), 3000);
@@ -71,7 +71,7 @@ class CDPClient {
         
         this.ws.on('open', () => {
             console.log('Connected to CDP');
-            vscode.window.showInformationMessage('Smart Auto Accept: Đã kết nối CDP thành công!');
+            vscode.window.showInformationMessage('Smart Auto Click-to-Accept: Đã kết nối CDP thành công!');
             this.startPolling();
         });
 
@@ -273,7 +273,7 @@ class CDPClient {
         
         if (timeout === -1) {
             // Chặn hoàn toàn, bắt buộc tự bấm tay
-            vscode.window.showWarningMessage(`🔴 Smart Auto Accept: Đã CHẶN lệnh rủi ro cao: "${item.content.substring(0, 60)}...". Bạn phải tự duyệt thủ công.`);
+            vscode.window.showWarningMessage(`🔴 Smart Auto Click-to-Accept: Đã CHẶN lệnh rủi ro cao: "${item.content.substring(0, 60)}...". Bạn phải tự duyệt thủ công.`);
             return;
         }
         
@@ -281,7 +281,7 @@ class CDPClient {
             // Hiển thị thông báo đếm ngược và cho phép hủy tự động duyệt
             const displayGroup = group === 'high' ? '⚠️ RỦI RO CAO' : '🟡 CẢNH GIÁC';
             const displayContent = item.content.length > 50 ? item.content.substring(0, 47) + '...' : item.content;
-            const message = `Smart Auto Accept: Phát hiện lệnh ${displayGroup} ("${displayContent}"). Sẽ tự động chạy sau ${timeout / 1000} giây.`;
+            const message = `Smart Auto Click-to-Accept: Phát hiện lệnh ${displayGroup} ("${displayContent}"). Sẽ tự động chạy sau ${timeout / 1000} giây.`;
             
             let isCancelled = false;
             
