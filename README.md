@@ -1,5 +1,7 @@
 # 🚀 Smart Auto Click-to-Accept (SAC)
 
+![Giao diện Dashboard của Smart Auto Click-to-Accept](./Screenshot_demo.png)
+
 **Smart Auto Click-to-Accept (SAC)** là một extension tự động click thông minh (Intelligent Auto-Clicker) dành cho các lập trình viên sử dụng mô hình AI-driven Development (như Antigravity). Nó hoạt động như một "Người gác cổng" tự động, giúp bạn phê duyệt các câu lệnh an toàn một cách chớp nhoáng, đồng thời ngăn chặn tuyệt đối các lệnh Terminal có nguy cơ phá hoại hệ thống.
 
 ---
