@@ -36,16 +36,16 @@ function getWebviewContent(config, isEnabled) {
             align-items: center;
             background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
             background-color: var(--bg-card);
-            padding: 16px;
+            padding: 9px 16px;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 11px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
         }
 
         .header-info h2 {
-            margin: 0 0 6px 0;
+            margin: 0 0 0 0;
             font-size: 22px;
             font-weight: 600;
             letter-spacing: -0.5px;
@@ -184,7 +184,7 @@ function getWebviewContent(config, isEnabled) {
         }
 
         .item { 
-            padding: 6px 10px; 
+            padding: 3px 10px; 
             margin-bottom: 6px; 
             border-radius: 6px; 
             cursor: grab; 
@@ -219,7 +219,7 @@ function getWebviewContent(config, isEnabled) {
         .item-medium { background: rgba(241, 250, 140, 0.08); color: var(--color-medium); border: 1px solid rgba(241, 250, 140, 0.25); }
         .item-high { background: rgba(255, 85, 85, 0.08); color: var(--color-high); border: 1px solid rgba(255, 85, 85, 0.25); }
         
-        .timeout-container { margin-bottom: 18px; font-size: 13px; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+        .timeout-container { margin-bottom: 5px; font-size: 13px; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
         
         .timeout-input { 
             width: 70px; 
