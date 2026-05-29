@@ -326,7 +326,7 @@ function getWebviewContent(config, isEnabled) {
             <h3 class="header-safe">🟢 Nhóm An Toàn</h3>
             <div class="timeout-container">
                 <label>Tự duyệt sau (ms):</label>
-                <input type="number" id="timeout-safe" class="timeout-input" value="${config.safe.timeout}">
+                <input type="number" id="timeout-safe" class="timeout-input" value="0" disabled title="Cố định ở 0 giây (Duyệt im lặng). Hãy chuyển lệnh qua nhóm khác nếu muốn đếm ngược.">
             </div>
             <div id="list-safe" class="list">
                 ${config.safe.list.map(cmd => `<div class="item item-safe" data-cmd="${cmd}">${cmd} <span class="remove">X</span></div>`).join('')}
